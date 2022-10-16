@@ -1,0 +1,33 @@
+<html>
+<body>
+    <h3>Loan Approval Prediction</h3>
+ 
+<div>
+  <form action="{{url_for('predict')}}" method="POST">
+    
+    <label for="gender">Gender</label>
+    <select id="gender" name="gender">
+      <option value="0">Female</option>
+      <option value="1">Male</option>
+    </select>
+    <label for="married">Married</label>
+    <select id="married" name="married">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+    </select>
+    <label for="p_value">Property Value</label>
+    <select id="p_value" name="p_value">
+        <option value="0">Rural</option>
+        <option value="1">Semi-urban</option>
+        <option value="2">Urban</option>
+    </select>
+    <label for="credit_history">Age</label>
+    <input type="text" id="credit_history" name="credit_history">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+  {{prediction_text}}
+</div>
+</body>
+</html>
+
